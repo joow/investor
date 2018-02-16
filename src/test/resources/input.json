@@ -1,0 +1,64 @@
+{
+  "positions": [
+    {
+      "name": "Name 1",
+      "isin": "FR1111111111",
+      "type": "Type 1",
+      "shares": 100,
+      "price": "111"
+    },
+    {
+      "name": "Name 2",
+      "isin": "FR2222222222",
+      "type": "Type 2",
+      "shares": 200,
+      "price": "222.2"
+    },
+    {
+      "name": "Name 3",
+      "isin": "FR3333333333",
+      "type": "Type 3",
+      "shares": 300,
+      "price": "333.33"
+    },
+    {
+      "name": "Name 4",
+      "isin": "ZZ4444444444",
+      "type": "Type 4",
+      "shares": 400,
+      "price": "444.444",
+      "buy": false
+    },
+    {
+      "name": "Name 5",
+      "isin": "ZZ0010315770",
+      "type": "Actions 5",
+      "shares": 500,
+      "price": "555.5555",
+      "buy": false
+    }
+  ],
+  "allocations": [
+    {
+      "type": "Actions 1",
+      "target": "50"
+    },
+    {
+      "type": "Actions 2",
+      "target": "25"
+    },
+    {
+      "type": "Actions 3",
+      "target": "15"
+    },
+    {
+      "type": "Actions 4",
+      "target": "5"
+    },
+    {
+      "type": "Actions 5",
+      "target": "5"
+    }
+  ],
+  "investment": "1000"
+}
