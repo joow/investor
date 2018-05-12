@@ -2,17 +2,21 @@ package org.mony.investor
 
 import java.math.BigDecimal
 
+data class Account(val name: String, val positions: List<Position>)
+
 data class Position(
     val name: String,
     val isin: String = "",
     val type: String,
-    val shares: Int,
+    val shares: BigDecimal,
     val price: BigDecimal,
     val buy: Boolean = true
 ) {
-    val amount = price * shares.toBigDecimal()
+    val amount = price * shares
 }
 
 data class Allocation(val type: String, val target: BigDecimal)
 
-data class Input(val positions: List<Position>, val allocations: List<Allocation>, val investment: BigDecimal)
+data class Input(val accounts: List<Account>, val allocations: List<Allocation>, val investment: BigDecimal) {
+    val positions = accounts.flatMap { it.positions }
+}

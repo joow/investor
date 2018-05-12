@@ -10,6 +10,7 @@ val INPUT: Input =
 class InputTest {
     @Test
     fun `should deserialize JSON`() {
+        assertThat(INPUT.accounts).hasSize(3)
         assertThat(INPUT.positions).hasSize(5)
         assertThat(INPUT.allocations).hasSize(5)
         assertThat(INPUT.investment).isEqualTo(BigDecimal("1000"))

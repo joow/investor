@@ -9,16 +9,20 @@
 The input file is a JSON file with the following format :
 
     {
-      // list of all currently held positions
-      "positions": [
-        {
-          "name": "Name of the position (fund)",
-          "isin": "ISIN of the position (fund). Optional",
-          "type": "Type of the position",
-          "shares": number of shares held,
-          "price": "Current price of the position (fund)",
-          "buy": indicate whether to buy or not the position. Optional (true by default)      
-        }
+      // list of all accounts
+      "accounts": [
+        "name": "Name of the account",
+        // list of all currently held positions
+        "positions": [
+          {
+            "name": "Name of the position",
+            "isin": "ISIN of the position (optional)",
+            "type": "Type of the position",
+            "shares": "Number of shares held",
+            "price": "Current price of the position",
+            "buy": indicate whether to buy or not the position. Optional (true by default)      
+          }
+        ],
       ],
       // list of percentages for all allocated types
       "allocations": [

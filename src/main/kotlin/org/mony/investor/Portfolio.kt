@@ -33,7 +33,7 @@ class Portfolio(private val positions: List<Position>) {
             .sortedBy { it.second }
 
         val nextPosition = differences.mapNotNull { candidate(it.first, investment) }
-            .firstOrNull()?.copy(shares = 1)
+            .firstOrNull()?.copy(shares = BigDecimal.ONE)
 
         return if (nextPosition == null) acc.groupingBy { it.type }.eachCount()
         else optimize(investment - nextPosition.price, allocations, acc.plus(nextPosition))
